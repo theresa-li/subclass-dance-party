@@ -33,18 +33,18 @@ describe('blinkyDancer', function() {
   });
 });
 
-describe('saltBae', function() {
+describe('pepper', function() {
 
-  var saltBae, blinkyDancer, clock;
+  var pepper, blinkyDancer, clock;
   var timeBetweenSteps = 100;
 
   beforeEach(function() {
     clock = sinon.useFakeTimers();
-    saltBae = new makeSaltBae(10, 20, timeBetweenSteps);
+    pepper = new makePepper(10, 20, timeBetweenSteps);
     blinkyDancer = new makeBlinkyDancer(10, 20, timeBetweenSteps);
   });
 
   it('should have a different image from blinky dancer', function() {
-    expect(saltBae.$node).to.not.be.equal(blinkyDancer.$node);
+    expect(pepper.$node).to.not.be.equal(blinkyDancer.$node);
   });
 });

@@ -3,7 +3,7 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-image: url("https://media.giphy.com/media/l4Jz3a8jO92crUlWM/giphy.gif");
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -22,5 +22,13 @@ body, a:link, a:visited, a:active{
 }
 .dancer{
   position:absolute;
+}
+
+.animate{
+  background-image: url("https://media.giphy.com/media/26BRx71hqRexBe7Wo/giphy.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}​
 }
 

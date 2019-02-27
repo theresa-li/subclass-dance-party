@@ -1,5 +1,6 @@
 $(document).ready(function() {
   window.dancers = [];
+  window.dancers2 = [];
 
   $('.addBlinky').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -28,9 +29,16 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    dancer.$node.mouseenter(function(){
+      dancer.$node.toggleClass('animate');
+    })
+    .mouseleave(function(){
+      dancer.$node.toggleClass('animate');
+    });
+    window.dancers.push(dancer);
   });
 
-  $('.addSaltBae').on('click', function(event) {
+  $('.addPepper').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
      * As long as the "data-dancer-maker-function-name" attribute of a
@@ -57,6 +65,22 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    dancer.$node.mouseenter(function(){
+      dancer.$node.toggleClass('animate');
+    })
+    .mouseleave(function(){
+      dancer.$node.toggleClass('animate');
+    });
+    window.dancers2.push(dancer);
+  });
+
+  $('.lineUp').on('click', function(event) {
+    for (var i = 0; i < window.dancers2.length; i++){
+      makePepper.prototype.lineUp(window.dancers2[i], i);
+    }
+    for (var i = 0; i < window.dancers.length; i++){
+      makeBlinkyDancer.prototype.lineUp(window.dancers[i], i);
+    }
   });
 });
 

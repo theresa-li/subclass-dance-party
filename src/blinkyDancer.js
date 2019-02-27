@@ -1,6 +1,6 @@
 var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
-  this.$node.append('<img src="https://media.giphy.com/media/PjpEeI11T7qSI/giphy.gif" height="160" width="240">');
+  this.$node.append('<img src="https://media.giphy.com/media/d2nw7n9WSqAi4/giphy.gif" height="240" width="240">');
 
 
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
@@ -26,3 +26,6 @@ makeBlinkyDancer.prototype.step = function(timeBetweenSteps){
     this.$node.toggle();
 };
 
+makeBlinkyDancer.prototype.lineUp = function(object, i){
+  object.setPosition(750, 50 + (i*150));
+}
